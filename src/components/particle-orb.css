@@ -1,0 +1,78 @@
+.orb-core {
+  transform-origin: center;
+  animation: orb-breathe 9s ease-in-out infinite;
+}
+
+.orb-dynamics {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transform-origin: center;
+  animation: orb-surface-drift 72s linear infinite;
+}
+
+.orb-aura {
+  animation: orb-aura-breathe 9s ease-in-out infinite;
+}
+
+.orbit-particles {
+  transform-origin: center;
+  animation: orb-particle-drift 84s linear infinite;
+}
+
+.orb-wrap--offscreen * {
+  animation-play-state: paused !important;
+}
+
+.orb-dots i,
+.orbit-particles i {
+  animation-duration: 5.8s;
+}
+
+@keyframes orb-surface-drift {
+  from { transform: rotate(0turn); }
+  to { transform: rotate(1turn); }
+}
+
+@keyframes orb-particle-drift {
+  from { transform: rotate(0turn); }
+  to { transform: rotate(1turn); }
+}
+
+@keyframes orb-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.012); }
+}
+
+@keyframes orb-aura-breathe {
+  0%, 100% { opacity: .62; transform: scale(1.035); }
+  50% { opacity: .96; transform: scale(1.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb-core,
+  .orb-dynamics,
+  .orb-aura,
+  .orbit-particles {
+    animation: none;
+    will-change: auto;
+  }
+
+  .orb-core,
+  .orb-dynamics,
+  .orbit-particles {
+    transform: none;
+  }
+
+  .orb-aura {
+    opacity: .8;
+    transform: scale(1.07);
+  }
+
+  .orb-dots i,
+  .orbit-particles i {
+    animation: none;
+    opacity: .82;
+    transform: none;
+  }
+}

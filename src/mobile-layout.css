@@ -1,0 +1,39 @@
+/* Keep the greeting and streak action in separate, bounded tracks on phones. */
+.race-heading,
+.race-heading-copy,
+.home-streak {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.home-streak strong {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .race-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 11px;
+  }
+
+  .race-heading-copy {
+    width: 100%;
+  }
+
+  .race-heading h1 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .home-streak {
+    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    min-width: 0;
+    max-width: 100%;
+  }
+}

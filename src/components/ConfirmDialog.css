@@ -1,0 +1,138 @@
+.lumi-confirm-dialog {
+  display: grid;
+  gap: 12px;
+  width: min(100%, 430px);
+  padding: clamp(20px, 5vw, 26px);
+}
+
+.lumi-confirm-dialog .lumi-confirm-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 2px;
+  border: 1px solid rgba(156, 141, 255, .24);
+  border-radius: 13px;
+  color: #c5adff;
+  background: rgba(156, 141, 255, .1);
+}
+
+.lumi-confirm-dialog.is-destructive .lumi-confirm-icon {
+  border-color: rgba(255, 96, 79, .28);
+  color: #ff9889;
+  background: rgba(255, 96, 79, .1);
+}
+
+.lumi-confirm-dialog h2 {
+  margin: 0;
+  color: var(--lumi-ink, #f2f3f5);
+  font-size: clamp(18px, 4vw, 20px);
+  line-height: 1.3;
+}
+
+.lumi-confirm-dialog p {
+  margin: 0;
+  color: var(--lumi-ink-soft, #b2bbc4);
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.lumi-confirm-dialog .lumi-confirm-actions {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+.lumi-confirm-dialog .lumi-confirm-actions button {
+  min-width: 112px;
+  min-height: 46px;
+  flex: 1 1 112px;
+  justify-content: center;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.lumi-confirm-dialog .lumi-confirm-cancel {
+  border-color: rgba(224, 231, 238, .22);
+  color: #d4d9df;
+  background: rgba(255, 255, 255, .035);
+  box-shadow: none;
+}
+
+.lumi-confirm-dialog .lumi-confirm-cancel:hover:not(:disabled) {
+  border-color: rgba(224, 231, 238, .38);
+  color: #fff;
+  background: rgba(255, 255, 255, .075);
+}
+
+.lumi-confirm-dialog .lumi-confirm-accept.is-destructive {
+  border-color: rgba(255, 112, 98, .52);
+  color: #fff7f5;
+  background: linear-gradient(120deg, #d94e46, #b93c3b);
+  box-shadow: 0 5px 16px rgba(198, 58, 54, .16);
+}
+
+.lumi-confirm-dialog .lumi-confirm-accept.is-destructive:hover:not(:disabled) {
+  border-color: rgba(255, 147, 133, .72);
+  background: linear-gradient(120deg, #e4584f, #c74440);
+  box-shadow: 0 6px 19px rgba(198, 58, 54, .24);
+}
+
+.lumi-confirm-dialog .lumi-confirm-actions button:active:not(:disabled) {
+  transform: scale(.985);
+}
+
+.lumi-confirm-dialog .lumi-confirm-actions button:focus-visible {
+  outline: 2px solid #ff9b8d;
+  outline-offset: 3px;
+}
+
+.lumi-confirm-dialog .lumi-confirm-actions button:disabled {
+  cursor: wait;
+  opacity: .62;
+}
+
+@media (max-width: 380px) {
+  .lumi-confirm-dialog {
+    gap: 10px;
+    border-radius: 17px;
+  }
+
+  .lumi-confirm-dialog .lumi-confirm-actions {
+    gap: 8px;
+  }
+
+  .lumi-confirm-dialog .lumi-confirm-actions button {
+    min-width: 0;
+    min-height: 44px;
+    flex-basis: calc(50% - 4px);
+    padding-inline: 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 330px) {
+  .lumi-confirm-dialog .lumi-confirm-actions {
+    flex-direction: column-reverse;
+  }
+
+  .lumi-confirm-dialog .lumi-confirm-actions button {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lumi-confirm-dialog .lumi-confirm-actions button {
+    transition: none;
+  }
+}

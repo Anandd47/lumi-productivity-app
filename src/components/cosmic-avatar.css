@@ -1,0 +1,78 @@
+.cosmic-avatar-emblem {
+  --avatar-hue: #ffad58;
+  --avatar-violet: #c86cff;
+  --avatar-blue: #48c2ff;
+  position: relative;
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  overflow: visible;
+  border: 1px solid color-mix(in srgb, var(--avatar-hue) 68%, white 12%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 27%, rgba(255,255,255,.32), transparent 22%),
+    radial-gradient(circle at 64% 70%, color-mix(in srgb, var(--avatar-blue) 55%, transparent), transparent 45%),
+    radial-gradient(circle at 30% 68%, color-mix(in srgb, var(--avatar-hue) 76%, transparent), transparent 52%),
+    radial-gradient(circle at 50% 50%, #21152c 0 36%, #090912 75%);
+  box-shadow: 0 0 9px color-mix(in srgb, var(--avatar-hue) 48%, transparent), inset 0 0 8px rgba(202,132,255,.22);
+}
+
+.cosmic-avatar-emblem::before {
+  position: absolute;
+  inset: 5px -3px;
+  border: 1px solid color-mix(in srgb, var(--avatar-violet) 72%, transparent);
+  border-right-color: color-mix(in srgb, var(--avatar-blue) 84%, transparent);
+  border-left-color: color-mix(in srgb, var(--avatar-hue) 84%, transparent);
+  border-radius: 50%;
+  content: '';
+  transform: rotate(-34deg);
+  filter: drop-shadow(0 0 3px color-mix(in srgb, var(--avatar-violet) 70%, transparent));
+}
+
+.cosmic-avatar-core {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff 0 18%, #fff0cf 36%, var(--avatar-hue) 72%);
+  box-shadow: 0 0 5px 2px color-mix(in srgb, var(--avatar-hue) 78%, transparent), 0 0 10px color-mix(in srgb, var(--avatar-violet) 58%, transparent);
+}
+
+.cosmic-avatar-star {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 4px var(--avatar-blue));
+}
+
+.cosmic-avatar-orange { --avatar-hue: #ffad58; --avatar-violet: #c86cff; --avatar-blue: #48c2ff; }
+.cosmic-avatar-violet { --avatar-hue: #c86cff; --avatar-violet: #a866ff; --avatar-blue: #56caff; }
+.cosmic-avatar-blue { --avatar-hue: #48c2ff; --avatar-violet: #a56bff; --avatar-blue: #50c8ff; }
+.cosmic-avatar-rose { --avatar-hue: #ff8eae; --avatar-violet: #ce6cff; --avatar-blue: #57c6ff; }
+
+.topbar-actions .avatar.avatar-orange,
+.topbar-actions .avatar.avatar-violet,
+.topbar-actions .avatar.avatar-blue,
+.topbar-actions .avatar.avatar-rose {
+  border: 1px solid rgba(209, 169, 245, .34);
+  background: radial-gradient(circle at 35% 28%, rgba(61,43,75,.92), rgba(13,12,22,.96) 73%);
+}
+
+.avatar-choice-button .cosmic-avatar-emblem {
+  width: 25px;
+  height: 25px;
+}
+
+.account-screen .avatar-choice-button.avatar-orange,
+.account-screen .avatar-choice-button.avatar-violet,
+.account-screen .avatar-choice-button.avatar-blue,
+.account-screen .avatar-choice-button.avatar-rose {
+  background: radial-gradient(circle at 35% 28%, rgba(56,42,68,.92), rgba(10,10,16,.98) 75%);
+  border-color: rgba(187, 160, 210, .28);
+}
+

@@ -1,0 +1,48 @@
+.cosmic-star-companion {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: center;
+  gap: 9px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.cosmic-star-button {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  padding: 2px;
+  border: 1px solid rgba(255, 183, 116, .24);
+  border-radius: 14px;
+  background: radial-gradient(circle at 40% 35%, rgba(201, 129, 255, .18), rgba(14, 17, 23, .8) 70%);
+  box-shadow: 0 0 18px rgba(164, 108, 245, .15), inset 0 1px rgba(255,255,255,.08);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.cosmic-star-button:hover { border-color: rgba(255, 174, 112, .52); box-shadow: 0 0 20px rgba(194, 116, 255, .25), inset 0 1px rgba(255,255,255,.1); }
+.cosmic-star-button:active { transform: scale(.94); }
+.cosmic-star-button:focus-visible { outline: 2px solid #ff9d78; outline-offset: 3px; }
+.cosmic-star-svg { width: 34px; height: 34px; overflow: visible; filter: drop-shadow(0 0 5px rgba(255, 168, 103, .35)); }
+.cosmic-star-svg.is-reacting { animation: cosmic-star-pop 420ms cubic-bezier(.2,.8,.25,1); }
+.cosmic-star-message { min-width: 0; color: #9ba5af; font-size: 10px; line-height: 1.4; overflow-wrap: anywhere; }
+
+@keyframes cosmic-star-pop {
+  0% { transform: scale(.82) rotate(-10deg); filter: brightness(1); }
+  55% { transform: scale(1.16) rotate(8deg); filter: brightness(1.28) drop-shadow(0 0 9px rgba(255, 177, 108, .6)); }
+  100% { transform: scale(1) rotate(0); filter: brightness(1) drop-shadow(0 0 5px rgba(255, 168, 103, .35)); }
+}
+
+@media (max-width: 600px) {
+  .cosmic-star-companion { grid-template-columns: 32px minmax(0, 1fr); gap: 8px; margin-top: 0; padding-top: 6px; }
+  .cosmic-star-button { width: 34px; height: 34px; border-radius: 12px; }
+  .cosmic-star-svg { width: 29px; height: 29px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cosmic-star-button { transition: none; }
+  .cosmic-star-svg.is-reacting { animation: none; }
+}

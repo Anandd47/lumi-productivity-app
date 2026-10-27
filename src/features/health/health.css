@@ -1,0 +1,70 @@
+.health-screen{padding:18px 0 30px}
+.health-page-heading{margin:8px 4px 20px}
+.health-page-heading h1{margin:7px 0 4px;font:800 clamp(29px,4vw,38px)/1.1 Manrope,'Segoe UI',system-ui,sans-serif;letter-spacing:-.05em}
+.health-page-heading p{margin:0;color:#aaa3b4;font-size:13px}
+.health-page-heading .section-kicker{display:flex;align-items:center;gap:6px;color:#c29bfa;font-size:10px;letter-spacing:.13em}
+.health-today-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:16px}
+.health-stat-card{min-width:0;padding:17px 19px;border:1px solid rgba(176,145,205,.17);border-radius:20px;background:linear-gradient(135deg,rgba(17,14,24,.9),rgba(10,10,16,.88))}
+.health-stat-top{display:flex;align-items:center;gap:9px;color:#a79daf;font-size:10px;letter-spacing:.1em}
+.health-stat-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;color:#75caff;background:rgba(52,162,232,.13);box-shadow:0 0 16px rgba(56,160,235,.12)}
+.activity-stat .health-stat-icon{color:#ff8da7;background:rgba(255,87,133,.12);box-shadow:0 0 16px rgba(255,87,133,.12)}
+.health-stat-card>strong{display:block;margin:14px 0 9px;font:700 27px Manrope,'Segoe UI',system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.health-stat-card>strong small{color:#aaa2b3;font:500 13px 'Segoe UI',system-ui,sans-serif}
+.health-goal-track{height:6px;border-radius:8px;background:rgba(255,255,255,.08);overflow:hidden}
+.health-goal-track i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#49bdf9,#9b72ff);box-shadow:0 0 10px rgba(70,180,255,.4);transition:width .25s ease}
+.health-stat-note{display:block;margin-top:8px;color:#928a9c;font-size:11px}
+.health-panel{min-width:0;margin-bottom:var(--lumi-section-gap,16px);padding:20px 22px;border:1px solid rgba(176,145,205,.17);border-radius:22px;background:linear-gradient(135deg,rgba(17,14,24,.9),rgba(10,10,16,.88))}
+.health-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:14px;border-bottom:1px solid rgba(163,147,174,.13)}
+.health-panel-heading h2{display:flex;align-items:center;gap:8px;margin:0;font:700 17px Manrope,'Segoe UI',system-ui,sans-serif}
+.health-panel-heading h2 svg{color:#78cfff}
+.health-panel-heading p{margin:5px 0 0;color:#9991a3;font-size:11px;line-height:1.45}
+.health-add-button,.health-form-actions .primary-button,.health-goal-row button{display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}
+.health-goal-row{display:flex;align-items:center;gap:9px;padding:13px 0;border-bottom:1px solid rgba(163,147,174,.11)}
+.health-goal-row label{color:#c8bfce;font-size:11px}
+.health-goal-row input,.health-entry-form input,.health-entry-form select{min-width:0;padding:8px 9px;border:1px solid rgba(182,154,210,.2);border-radius:10px;background:rgba(5,5,9,.68);color:#f7f2fa;font:inherit;color-scheme:dark}
+.health-goal-row input{width:70px}
+.health-goal-row>span{margin-left:auto;color:#827b8b;font-size:10px}
+.health-goal-row input:focus-visible,.health-entry-form input:focus-visible,.health-entry-form select:focus-visible{outline:2px solid #d0a5ff;outline-offset:2px}
+.health-entry-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:14px 0;padding:14px;border:1px solid rgba(101,180,227,.19);border-radius:15px;background:rgba(11,15,23,.58)}
+.activity-form{grid-template-columns:repeat(3,minmax(0,1fr))}
+.health-entry-form label{display:grid;gap:6px;color:#bdb5c6;font-size:11px}
+.health-entry-form input,.health-entry-form select{width:100%}
+.health-form-actions{grid-column:1/-1;display:flex;justify-content:flex-end;gap:8px}
+.health-history-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:15px 0 7px}
+.health-history-heading h3{margin:0;font-size:13px}
+.health-history-heading span{color:#91899c;font-size:10px}
+.health-empty{margin:0;padding:18px 12px;text-align:center;color:#9991a3;font-size:12px;line-height:1.5}
+.health-entry-list{display:grid}
+.health-entry-row{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:10px;min-height:57px;padding:8px 5px;border-top:1px solid rgba(163,147,174,.1)}
+.health-row-icon{width:29px;height:29px;display:grid;place-items:center;border-radius:50%}
+.water-row-icon{color:#70caff;background:rgba(52,162,232,.13)}
+.activity-row-icon{color:#ff91aa;background:rgba(255,87,133,.12)}
+.health-entry-row>div:nth-child(2){display:grid;gap:4px;min-width:0}
+.health-entry-row>div:nth-child(2)>strong{overflow:hidden;color:#e7e1eb;font-size:11px;text-overflow:ellipsis;white-space:nowrap}
+.health-entry-row>div:nth-child(2)>span{color:#938b9d;font-size:10px}
+.health-entry-value{color:#d5b4ed;font-size:12px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.health-entry-value small{color:#9a91a2;font-size:9px;font-weight:500}
+.health-entry-actions{display:flex;gap:4px}
+.health-feedback{display:flex;align-items:center;gap:8px;margin:12px 0;padding:9px 11px;border-radius:10px;background:rgba(84,62,120,.18);color:#d8c7ee;font-size:12px}
+.health-feedback button{margin-left:auto;border:0;background:transparent;color:#dcbaff;text-decoration:underline;cursor:pointer}
+.health-error{color:#ffb2a4;background:rgba(124,43,41,.18)}
+.metric-card-link{appearance:none;display:block;width:100%;height:100%;padding:0;border:0;background:transparent;text-align:initial;color:inherit;cursor:pointer;transition:transform .18s ease}
+.metric-card-link .metric-card{transition:border-color .18s ease,box-shadow .18s ease}
+@media(hover:hover){.metric-card-link:hover{transform:translateY(-2px)}.metric-card-link:hover .metric-card{border-color:rgba(204,161,244,.48);box-shadow:0 0 17px rgba(162,104,224,.14),0 14px 42px rgba(0,0,0,.27),inset 0 1px rgba(255,255,255,.035)}}
+.metric-card-link:active{transform:scale(.99)}
+.metric-card-link:active .metric-card{border-color:rgba(204,161,244,.42);box-shadow:0 0 12px rgba(162,104,224,.13),inset 0 1px rgba(255,255,255,.035)}
+.metric-card-link:focus-visible{outline:2px solid #e7b1ff;outline-offset:4px;border-radius:23px}
+@media(prefers-reduced-motion:reduce){.metric-card-link,.metric-card-link .metric-card{transition:none}.metric-card-link:hover,.metric-card-link:active{transform:none}}
+@media(max-width:600px){.health-screen{padding:16px 0 24px}.health-page-heading{margin:8px 2px 18px}.health-page-heading h1{font-size:29px}.health-page-heading p{font-size:12px}.health-today-grid{gap:10px;margin-bottom:18px}.health-stat-card{padding:16px 14px;border-radius:18px}.health-stat-top{gap:7px;font-size:10px}.health-stat-icon{width:32px;height:32px}.health-stat-card>strong{font-size:23px}.health-stat-card>strong small{font-size:11px}.health-stat-note{font-size:10px}.health-panel{padding:var(--lumi-panel-padding,16px);border-radius:19px;margin-bottom:var(--lumi-section-gap,16px)}.health-panel-heading{align-items:flex-start;gap:10px}.health-panel-heading h2{font-size:15px}.health-panel-heading p{max-width:220px;font-size:11px}.health-add-button{min-height:44px;padding:0 10px;font-size:11px}.health-goal-row{flex-wrap:wrap;gap:10px}.health-goal-row label{flex:1;font-size:12px}.health-goal-row input,.health-entry-form input,.health-entry-form select{min-height:44px;font-size:13px}.health-goal-row>span{flex:1 0 100%;margin:0}.health-entry-form,.activity-form{grid-template-columns:1fr;padding:16px;gap:13px}.health-form-actions{justify-content:flex-end}.health-form-actions button{min-height:44px}.health-entry-row{grid-template-columns:28px minmax(0,1fr) auto;gap:9px;min-height:60px}.health-row-icon{width:28px;height:28px}.health-entry-row>div:nth-child(2)>strong{font-size:12px}.health-entry-row>div:nth-child(2)>span{font-size:11px}.health-entry-actions{grid-column:2/-1;justify-content:flex-end}}
+
+
+
+/* Porcelain theme for Health-owned surfaces and controls. */
+.health-stat-card,.health-entry-form{border-color:var(--lumi-line);background:#fffefa;box-shadow:var(--lumi-shadow)}
+.health-stat-top,.health-stat-card>strong,.health-stat-card>strong small,.health-goal-row label,.health-goal-row>span,.health-entry-form label,.health-history-heading h3,.health-entry-row>div:nth-child(2)>strong{color:var(--lumi-ink)}
+.health-panel{border-color:var(--lumi-line);background:#fffefa;box-shadow:var(--lumi-shadow)}
+.health-goal-row{border-color:var(--lumi-line)}
+.health-goal-row input,.health-entry-form input,.health-entry-form select{border-color:#dcd9e0;background:#fff;color:var(--lumi-ink);color-scheme:light}
+.health-entry-row{border-color:var(--lumi-line)}
+.health-entry-row>div:nth-child(2)>span,.health-entry-value small,.health-history-heading span,.health-stat-note,.health-empty{color:var(--lumi-muted)}
+.health-entry-value{color:#625e9e}.health-feedback{border:1px solid #dedbed;background:#f2f0f8;color:#504c79}.health-error{border-color:#ebcfd0;background:#faeeee;color:#873e45}

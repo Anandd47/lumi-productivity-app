@@ -1,0 +1,187 @@
+.activity-icon-picker {
+  min-width: 0;
+  position: relative;
+  display: grid;
+  gap: 6px;
+}
+
+.activity-icon-picker-label {
+  color: var(--lumi-ink-soft, #b2bbc4);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.activity-icon-trigger {
+  min-width: 0;
+  min-height: 46px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 11px;
+  border: 1px solid var(--lumi-line-strong, rgba(224, 231, 238, .18));
+  border-radius: 11px;
+  color: var(--lumi-ink, #f2f3f5);
+  background: rgba(16, 21, 26, .92);
+  text-align: left;
+  cursor: pointer;
+}
+
+.activity-icon-trigger:hover {
+  border-color: rgba(156, 141, 255, .44);
+  background: rgba(27, 27, 38, .96);
+}
+
+.activity-icon-trigger:focus-visible,
+.activity-icon-categories button:focus-visible,
+.activity-icon-grid button:focus-visible {
+  outline: 2px solid #ff897b;
+  outline-offset: 2px;
+}
+
+.activity-icon-trigger-preview {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 9px;
+  color: #e1b3ff;
+  background: rgba(156, 141, 255, .12);
+}
+
+.activity-icon-trigger > span:nth-child(2) {
+  min-width: 0;
+  overflow: hidden;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activity-icon-trigger-action {
+  margin-left: auto;
+  color: #c5a5e2;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.activity-icon-popover {
+  z-index: 8;
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+  padding: 11px;
+  border: 1px solid rgba(156, 141, 255, .27);
+  border-radius: 14px;
+  background: linear-gradient(145deg, #20252d, #14181f);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, .35), inset 0 1px rgba(255, 255, 255, .025);
+}
+
+.activity-icon-categories {
+  min-width: 0;
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  padding: 1px 1px 5px;
+  scrollbar-width: thin;
+}
+
+.activity-icon-categories button {
+  min-height: 40px;
+  flex: 0 0 auto;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: #b4bbc4;
+  background: transparent;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.activity-icon-categories button[aria-pressed="true"] {
+  border-color: rgba(255, 96, 79, .27);
+  color: #ffe0d9;
+  background: rgba(255, 96, 79, .1);
+}
+
+.activity-icon-grid {
+  min-width: 0;
+  max-height: 190px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+  gap: 6px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 2px;
+}
+
+.activity-icon-grid button {
+  min-width: 0;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(224, 231, 238, .09);
+  border-radius: 11px;
+  color: #c6b6e2;
+  background: rgba(255, 255, 255, .025);
+  cursor: pointer;
+}
+
+.activity-icon-grid button:hover {
+  border-color: rgba(156, 141, 255, .34);
+  background: rgba(156, 141, 255, .09);
+}
+
+.activity-icon-grid button.selected,
+.activity-icon-grid button[aria-pressed="true"] {
+  border-color: rgba(255, 128, 101, .55);
+  color: #ffc0a5;
+  background: linear-gradient(145deg, rgba(255, 96, 79, .12), rgba(156, 141, 255, .1));
+  box-shadow: inset 0 0 12px rgba(156, 141, 255, .06);
+}
+
+.activity-icon-grid .activity-icon-none {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  color: #aeb6bf;
+  font-size: 11px;
+}
+
+.activity-icon-hint {
+  margin: 0;
+  color: var(--lumi-muted, #9aa4ae);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.activity-icon-inline {
+  width: 26px;
+  height: 26px;
+  display: inline-grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(156, 141, 255, .15);
+  border-radius: 8px;
+  color: #c8b4e7;
+  background: rgba(156, 141, 255, .08);
+}
+
+.habit-icon .activity-icon-inline {
+  width: auto;
+  height: auto;
+  border: 0;
+  color: inherit;
+  background: transparent;
+}
+
+@media (max-width: 600px) {
+  .activity-icon-popover { padding: 9px; }
+  .activity-icon-grid { max-height: 164px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .activity-icon-trigger { transition: none; }
+}

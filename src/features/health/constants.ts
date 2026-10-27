@@ -1,0 +1,1 @@
+export const DEFAULT_WATER_GOAL_GLASSES = 8

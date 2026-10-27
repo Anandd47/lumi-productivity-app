@@ -1,0 +1,70 @@
+.admin-users-shell { min-height:100vh; padding:24px 16px 44px; }
+.admin-users-page { position:relative; z-index:1; width:min(100%,1040px); margin:0 auto; }
+.admin-users-header,.admin-users-panel-heading,.admin-users-pagination { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.admin-users-header { min-height:42px; }
+.admin-users-back,.admin-users-secure { display:inline-flex; align-items:center; gap:7px; color:#cdb3e0; font-size:11px; text-decoration:none; }
+.admin-users-secure { color:#9ed4b5; }
+.admin-users-heading { margin:42px 0 20px; }
+.admin-users-heading>span { display:flex; align-items:center; gap:7px; color:#ffc17e; font-size:10px; letter-spacing:.12em; }
+.admin-users-heading h1 { margin:9px 0 5px; font:800 clamp(27px,5vw,40px)/1.1 Manrope,'Segoe UI',system-ui,sans-serif; letter-spacing:-.05em; }
+.admin-users-heading p { max-width:640px; margin:0; color:#aaa3b4; font-size:12px; line-height:1.55; }
+.admin-users-panel { padding:18px; border-radius:20px; }
+.admin-users-panel-heading { padding-bottom:13px; border-bottom:1px solid rgba(163,147,174,.13); }
+.admin-users-panel-heading h2 { margin:0; font:700 15px Manrope,'Segoe UI',system-ui,sans-serif; }
+.admin-users-refresh,.admin-users-pagination button { min-height:36px; padding:0 12px; border:1px solid rgba(181,139,215,.25); border-radius:10px; background:rgba(22,16,31,.72); color:#dfc7ef; cursor:pointer; }
+.admin-users-refresh { width:36px; display:grid; place-items:center; padding:0; }
+.admin-users-refresh:disabled,.admin-users-pagination button:disabled { opacity:.5; cursor:default; }
+.admin-users-error,.admin-users-empty,.admin-users-loading { padding:22px 8px; color:#aaa3b4; font-size:12px; text-align:center; }
+.admin-users-error { color:#ffaaa1; }
+.admin-users-table-wrap { overflow-x:auto; }
+.admin-users-table { width:100%; border-collapse:collapse; text-align:left; font-size:11px; }
+.admin-users-table th,.admin-users-table td { padding:12px 10px; border-bottom:1px solid rgba(163,147,174,.1); vertical-align:top; }
+.admin-users-table th { color:#a99db2; font-size:10px; font-weight:600; }
+.admin-users-table td { color:#e5deeb; }
+.admin-users-table code { color:#bfa7d0; font-size:10px; overflow-wrap:anywhere; }
+.admin-users-pagination { justify-content:flex-end; padding-top:14px; }
+.admin-users-pagination span { color:#9c93a5; font-size:10px; }
+.admin-users-footer { margin-top:28px; color:#756e80; font-size:9px; text-align:center; }
+.admin-users-back:focus-visible,.admin-users-refresh:focus-visible,.admin-users-pagination button:focus-visible { outline:2px solid #e7b1ff; outline-offset:3px; }
+@media(max-width:600px){.admin-users-shell{padding:calc(var(--lumi-safe-top,env(safe-area-inset-top,0px)) + 16px) 16px calc(var(--lumi-safe-bottom,env(safe-area-inset-bottom,0px)) + 30px)}.admin-users-heading{margin:24px 0 18px}.admin-users-panel{padding:16px;border-radius:18px}.admin-users-table{min-width:540px}.admin-users-table th,.admin-users-table td{padding:11px 9px}.admin-users-pagination{justify-content:center}.admin-users-refresh,.admin-users-pagination button{min-height:44px}.admin-users-refresh{width:44px}}
+
+.admin-users-shell{overflow-x:clip;overflow-y:visible;padding-top:var(--lumi-safe-top,env(safe-area-inset-top,0px));padding-bottom:calc(32px + var(--lumi-safe-bottom,env(safe-area-inset-bottom,0px)))}
+.admin-overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.admin-overview-card{display:grid;gap:7px;min-width:0;padding:16px;border-radius:17px}
+.admin-overview-card>span{color:#aaa0b5;font-size:10px}
+.admin-overview-card>strong{color:#f8f3fb;font:750 clamp(21px,4vw,29px)/1 Manrope,'Segoe UI',system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.admin-overview-card>small{color:#857c90;font-size:9px}
+.admin-registration-panel{margin-bottom:14px;padding:17px 18px;border-radius:18px}
+.admin-users-panel-heading p{margin:5px 0 0;color:#938a9e;font-size:10px}
+.admin-registration-chart{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(4px,1.5vw,12px);height:124px;padding-top:15px}
+.admin-registration-month{display:grid;grid-template-rows:minmax(0,1fr) 14px 13px;justify-items:center;gap:3px;min-width:0}
+.admin-registration-bar-track{display:flex;align-items:flex-end;justify-content:center;width:100%;height:100%;border-bottom:1px solid rgba(182,157,203,.16)}
+.admin-registration-bar-track span{display:block;width:min(70%,18px);border-radius:5px 5px 1px 1px;background:linear-gradient(180deg,#d88bff,#7c54d8);box-shadow:0 0 10px rgba(167,107,235,.17)}
+.admin-registration-month small{overflow:hidden;max-width:100%;color:#938a9e;font-size:8px;text-overflow:clip}
+.admin-registration-month b{color:#cfc1da;font-size:8px;font-weight:500;font-variant-numeric:tabular-nums}
+.admin-users-search{display:flex;align-items:center;gap:9px;min-height:42px;margin:13px 0 6px;padding:0 12px;border:1px solid rgba(181,139,215,.22);border-radius:12px;background:rgba(7,6,11,.52);color:#9c8eaa}
+.admin-users-search:focus-within{border-color:rgba(205,155,255,.65);box-shadow:0 0 0 3px rgba(173,112,227,.12)}
+.admin-users-search input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#f1eaf6;font:inherit;font-size:12px}
+.admin-users-search input::placeholder{color:#7e7688}
+.admin-users-search input:focus-visible{outline:0}
+.admin-users-search:has(input:focus-visible){outline:2px solid #e7b1ff;outline-offset:2px}
+.admin-users-table{min-width:680px}
+.admin-email-status{display:inline-flex;align-items:center;padding:4px 7px;border:1px solid rgba(172,155,191,.2);border-radius:20px;color:#c1b8cb;font-size:9px;white-space:nowrap}
+.admin-email-status.verified{border-color:rgba(106,194,151,.27);color:#a9e1c2}
+.admin-email-status.unverified{border-color:rgba(242,176,114,.24);color:#f1c391}
+.admin-users-error-panel{margin:16px 0;padding:20px;border:1px solid rgba(255,128,124,.25);border-radius:18px;background:rgba(79,28,36,.16);color:#ffb2ac}
+.admin-users-error-panel strong{font-size:14px}
+.admin-users-error-panel p{margin:7px 0 0;color:#c4a1a4;font-size:11px;line-height:1.5}
+.admin-users-refresh:focus-visible,.admin-users-pagination button:focus-visible,.admin-users-back:focus-visible{outline:2px solid #e7b1ff;outline-offset:3px}
+@media(max-width:650px){.admin-overview-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.admin-overview-card{gap:6px;padding:13px 10px}.admin-overview-card>span{font-size:9px;line-height:1.3}.admin-overview-card>strong{font-size:20px}.admin-overview-card>small{font-size:9px}.admin-registration-panel{padding:16px}.admin-registration-chart{gap:4px;height:112px}.admin-users-panel-heading{align-items:flex-start}.admin-users-search{margin-top:12px}}
+@media(prefers-reduced-motion:reduce){.admin-users-search,.admin-users-refresh,.admin-users-pagination button{transition:none}}
+
+/* Secure creator directory in the Lumi light application shell. */
+.admin-users-back,.admin-users-secure{color:#5e5a98}.admin-users-secure{color:#4f7968}
+.admin-users-heading>span{color:#706ab5}.admin-users-heading p,.admin-users-panel-heading p{color:var(--lumi-muted)}
+.admin-users-panel{border-color:var(--lumi-line);background:#fffefa;box-shadow:var(--lumi-shadow)}
+.admin-overview-card{border-color:var(--lumi-line);background:#fffefa}.admin-overview-card>span,.admin-overview-card>small{color:var(--lumi-muted)}.admin-overview-card>strong{color:var(--lumi-ink)}
+.admin-users-table th{color:#65626d;background:#f2f0f6}.admin-users-table td{color:#3d3b44;border-color:var(--lumi-line)}.admin-users-table code{color:#625e9e}
+.admin-users-search,.admin-users-pagination button,.admin-users-refresh{border-color:var(--lumi-line);background:#f7f6f3;color:#4b4954}.admin-users-search input{color:var(--lumi-ink)}.admin-users-search input::placeholder{color:#98959f}
+.admin-email-status{border-color:var(--lumi-line);color:#625e72}.admin-email-status.verified{border-color:#cfe2d9;color:#3d725e}.admin-email-status.unverified{border-color:#eadcc9;color:#89663e}
+.admin-users-empty,.admin-users-loading,.admin-users-footer,.admin-users-pagination span{color:var(--lumi-muted)}.admin-users-error-panel{border-color:#ebcfd0;background:#faeeee;color:#873e45}.admin-users-error-panel p{color:#805b5f}

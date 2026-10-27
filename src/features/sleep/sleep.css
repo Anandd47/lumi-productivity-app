@@ -1,0 +1,46 @@
+.sleep-tracker-card{margin:16px 0 28px;padding:20px 22px;border:1px solid rgba(176,145,205,.18);border-radius:22px;background:linear-gradient(135deg,rgba(17,14,24,.9),rgba(10,10,16,.88));}
+.sleep-tracker-heading,.sleep-history-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.sleep-tracker-heading{padding-bottom:16px;border-bottom:1px solid rgba(163,147,174,.13)}
+.sleep-tracker-heading h2{margin:7px 0 3px;font:700 19px Manrope,system-ui,sans-serif}
+.sleep-tracker-heading p,.sleep-editor-heading p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}
+.sleep-tracker-heading .section-kicker{display:flex;align-items:center;gap:6px;color:#c29bfa;font-size:10px;letter-spacing:.13em}
+.sleep-add-button,.sleep-editor-actions .primary-button,.sleep-goal-form button{display:inline-flex;align-items:center;justify-content:center;gap:7px;white-space:nowrap}
+.sleep-week-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:16px 0}
+.sleep-week-summary article{display:grid;gap:5px;padding:12px 14px;border:1px solid rgba(181,152,209,.13);border-radius:14px;background:rgba(255,255,255,.025)}
+.sleep-week-summary article span,.sleep-settings-row>div span{font-size:11px;color:var(--muted)}
+.sleep-week-summary article strong{font-size:17px;font-weight:650}
+.sleep-settings-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid rgba(163,147,174,.12);border-bottom:1px solid rgba(163,147,174,.12)}
+.sleep-settings-row>div{display:grid;gap:4px}.sleep-settings-row>div strong{font-size:13px}
+.sleep-goal-form{display:flex;align-items:center;gap:8px}.sleep-goal-form label{font-size:11px;color:var(--muted)}
+.sleep-goal-form input{width:76px;padding:8px 9px;border:1px solid rgba(182,154,210,.2);border-radius:10px;background:rgba(5,5,9,.68);color:#fff;font:inherit}
+.sleep-goal-form input:focus-visible,.sleep-fields input:focus-visible{outline:2px solid #d0a5ff;outline-offset:2px}
+.sleep-editor{margin:16px 0;padding:16px;border:1px solid rgba(190,113,255,.24);border-radius:16px;background:rgba(16,13,24,.72)}
+.sleep-editor-heading h3,.sleep-history-heading h3{margin:0 0 4px;font-size:14px}
+.sleep-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.sleep-fields label{display:grid;grid-template-columns:17px 1fr;align-items:center;gap:6px;color:#c5becd;font-size:11px}
+.sleep-fields label svg{color:#bb86ff}.sleep-fields input{grid-column:1/-1;width:100%;min-width:0;padding:9px 10px;border:1px solid rgba(182,154,210,.2);border-radius:10px;background:rgba(5,5,9,.68);color:#fff;font:inherit;color-scheme:dark}
+.sleep-editor-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:14px}
+.sleep-feedback{display:flex;align-items:center;gap:8px;margin:12px 0;padding:9px 11px;border-radius:10px;background:rgba(84,62,120,.18);color:#d8c7ee;font-size:12px}
+.sleep-feedback button{margin-left:auto;border:0;background:transparent;color:#dcbaff;text-decoration:underline;cursor:pointer}
+.sleep-error{color:#ffb2a4;background:rgba(124,43,41,.18)}
+.sleep-history{padding-top:16px}.sleep-history-heading{margin-bottom:10px}.sleep-history-heading h3{margin:0}.sleep-history-heading span{color:var(--muted);font-size:11px}
+.sleep-history-empty{margin:0;padding:22px 12px;text-align:center;color:var(--muted);font-size:12px}
+.sleep-history-list{display:grid;gap:8px}
+.sleep-history-row{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:11px;padding:10px 8px;border-top:1px solid rgba(163,147,174,.1)}
+.sleep-history-icon{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;color:#c18aff;background:rgba(164,102,255,.13)}
+.sleep-history-copy{display:grid;gap:4px;min-width:0}.sleep-history-copy>strong{font-size:12px}.sleep-history-copy>span{font-size:10px;color:var(--muted)}
+.sleep-progress-track{height:3px;width:min(100%,240px);border-radius:4px;background:rgba(255,255,255,.09);overflow:hidden}.sleep-progress-track i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#a65cff,#58aaff);box-shadow:0 0 8px #a65cff}
+.sleep-history-duration{font-size:13px;white-space:nowrap}.sleep-history-actions{display:flex;gap:4px}
+.sleep-row-action{display:grid;place-items:center;width:30px;height:30px;border:1px solid rgba(180,154,203,.14);border-radius:9px;background:rgba(255,255,255,.025);color:#c8bdd4;cursor:pointer}
+.sleep-row-action:hover{color:white;border-color:rgba(190,113,255,.4)}.sleep-row-action.delete-action:hover{color:#ff9b8d;border-color:rgba(255,130,110,.4)}
+@media(max-width:600px){.sleep-tracker-card{margin:18px 0 24px;padding:var(--lumi-panel-padding,16px);border-radius:19px}.sleep-tracker-heading{align-items:flex-start;gap:12px}.sleep-tracker-heading h2{font-size:18px}.sleep-week-summary{gap:9px;padding:18px 0}.sleep-week-summary article{padding:12px 10px}.sleep-week-summary article span{font-size:10px;line-height:1.35}.sleep-week-summary article strong{font-size:15px}.sleep-settings-row{align-items:flex-start;flex-direction:column;gap:12px}.sleep-goal-form{width:100%;flex-wrap:wrap}.sleep-goal-form label{flex:1;font-size:12px}.sleep-goal-form input,.sleep-fields input{min-height:44px;font-size:13px}.sleep-fields{grid-template-columns:1fr;gap:14px}.sleep-fields label{font-size:12px}.sleep-history-row{grid-template-columns:30px minmax(0,1fr) auto;gap:9px;min-height:60px}.sleep-history-icon{width:29px;height:29px}.sleep-history-copy>strong{font-size:13px}.sleep-history-copy>span{font-size:11px}.sleep-history-duration{grid-column:3;grid-row:1}.sleep-history-actions{grid-column:2/-1;justify-content:flex-end}.sleep-row-action{width:36px;height:36px}}
+
+/* Porcelain theme for Sleep-owned surfaces and controls. */
+.sleep-tracker-card{border-color:var(--lumi-line);background:#fffefa;box-shadow:var(--lumi-shadow)}
+.sleep-week-summary article,.sleep-editor{border-color:var(--lumi-line);background:#f8f7f4}
+.sleep-week-summary article span,.sleep-settings-row>div span,.sleep-goal-form label,.sleep-fields label,.sleep-history-heading span{color:var(--lumi-muted)}
+.sleep-week-summary article strong,.sleep-settings-row>div strong,.sleep-editor-heading h3,.sleep-history-heading h3{color:var(--lumi-ink)}
+.sleep-goal-form input,.sleep-fields input{border-color:#dcd9e0;background:#fff;color:var(--lumi-ink);color-scheme:light}
+.sleep-settings-row{border-color:var(--lumi-line)}
+.sleep-feedback{border:1px solid #dedbed;background:#f2f0f8;color:#504c79}.sleep-error{border-color:#ebcfd0;background:#faeeee;color:#873e45}
+.sleep-history-row{border-color:var(--lumi-line);color:var(--lumi-ink)}

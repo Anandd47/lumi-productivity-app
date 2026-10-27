@@ -1,0 +1,1 @@
+export const DEFAULT_SLEEP_TARGET_MINUTES = 8 * 60

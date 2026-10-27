@@ -1,0 +1,242 @@
+:root {
+  --dashboard-card-pad: 22px;
+  --dashboard-card-header-height: 62px;
+  --dashboard-card-content-gap: 12px;
+}
+
+.habits-card,
+.priorities-card {
+  padding: 0 var(--dashboard-card-pad);
+  border-radius: 22px;
+}
+
+.dashboard-data-header,
+.habits-card-heading,
+.section-heading {
+  min-height: var(--dashboard-card-header-height);
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid rgba(163, 147, 174, .13);
+}
+
+.dashboard-data-title,
+.heading-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.dashboard-data-title h2,
+.section-heading h2,
+.habits-card-heading h2 {
+  margin: 0;
+  font: 700 16px Manrope, 'Segoe UI', system-ui, sans-serif;
+  letter-spacing: -.4px;
+}
+
+.dashboard-data-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+}
+
+.habit-title-icon {
+  color: #c77cff;
+  filter: drop-shadow(0 0 8px rgba(199, 124, 255, .35));
+}
+
+.dashboard-data-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex: 0 0 auto;
+}
+
+.dashboard-data-body {
+  padding: var(--dashboard-card-content-gap) 0;
+}
+
+.dashboard-data-body > .habit-editor {
+  margin: 0 0 var(--dashboard-card-content-gap);
+}
+
+.habits-empty,
+.task-empty {
+  min-height: 0;
+  margin: 0;
+  padding: 8px 0;
+  color: #aaa3b4;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.dashboard-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  text-align: center;
+}
+
+.dashboard-add-action {
+  min-height: 30px;
+  padding: 0 2px;
+  color: #d1a9ef;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.habits-card .habit-row,
+.priorities-card .priority-row {
+  min-height: 50px;
+  height: auto;
+}
+
+.habit-count {
+  color: #aaa3b4;
+  font-size: 12px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric-empty-content {
+  width: min(100% - 24px, 220px);
+  min-height: 104px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.metric-empty-content strong {
+  color: #c2b9cb;
+  font: 500 13px Manrope, 'Segoe UI', sans-serif;
+}
+
+.metric-empty-content span {
+  color: #8f8799;
+  font-size: 10px;
+}
+
+.priorities-card:after {
+  content: none;
+}
+
+.priorities-card .left-count {
+  padding: 0;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.priorities-card .task-list .priority-row {
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.priorities-card .task-list .priority-row.has-icon {
+  grid-template-columns: 42px 28px minmax(0, 1fr);
+}
+
+.priorities-card .priority-title {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.priorities-card .task-actions {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --dashboard-card-pad: 16px;
+    --dashboard-card-header-height: 60px;
+    --dashboard-card-content-gap: 12px;
+  }
+
+  .habits-card,
+  .priorities-card {
+    border-radius: 19px;
+  }
+
+  .dashboard-data-header,
+  .habits-card-heading,
+  .section-heading {
+    flex-wrap: wrap;
+    row-gap: 6px;
+    padding: 8px 0;
+  }
+
+  .dashboard-data-title,
+  .heading-title {
+    flex: 1 1 145px;
+  }
+
+  .dashboard-data-title h2,
+  .section-heading h2,
+  .habits-card-heading h2 {
+    font-size: 15px;
+  }
+
+  .dashboard-data-actions {
+    gap: 9px;
+  }
+
+  .manage-habits-button {
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  .habit-count { font-size: 11px; }
+  .metric-empty-content strong { font-size: 12px; }
+  .metric-empty-content { width: calc(100% - 12px); }
+
+  .habits-card .habit-row,
+  .priorities-card .priority-row {
+    min-height: 50px;
+  }
+
+  .priorities-card .task-list .priority-row {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .priorities-card .task-list .priority-row.has-icon {
+    grid-template-columns: 40px 26px minmax(0, 1fr);
+  }
+
+  .priorities-card .priority-row time {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 370px) {
+  :root { --dashboard-card-pad: 16px; }
+
+  .dashboard-data-actions { gap: 6px; }
+  .dashboard-data-title,
+  .heading-title { flex-basis: 130px; }
+  .priorities-card .task-list .priority-row {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .priorities-card .task-list .priority-row.has-icon {
+    grid-template-columns: 38px 24px minmax(0, 1fr);
+  }
+}
+.task-import-panel{display:grid;gap:10px;margin:0 0 14px;padding:15px 17px;border:1px solid rgba(183,132,231,.2);border-radius:16px;background:linear-gradient(125deg,rgba(31,22,42,.82),rgba(12,12,18,.85))}
+.task-import-panel h2{margin:0 0 4px;font:700 13px Manrope,'Segoe UI',system-ui,sans-serif}
+.task-import-panel p{margin:0;color:#a9a0b3;font-size:10px;line-height:1.5}
+.task-import-panel .task-import-summary{color:#d4c9df}
+.task-import-panel .secondary-button{justify-self:start;min-height:36px}
+.task-import-retry{margin-left:8px;border:0;background:transparent;color:#e4c1ff;text-decoration:underline;cursor:pointer}
+@media(max-width:600px){.task-import-panel{padding:13px;border-radius:14px}.task-import-panel .secondary-button{width:100%;justify-content:center}}

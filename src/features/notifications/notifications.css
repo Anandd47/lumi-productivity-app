@@ -1,0 +1,34 @@
+.notification-panel{margin-bottom:15px;padding:19px 21px;border-radius:20px}
+.notification-panel-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:13px;border-bottom:1px solid rgba(163,147,174,.12);color:#d4a5ff}
+.notification-panel-heading>div{color:#f7f0fa}
+.notification-panel-heading h2{margin:0;font:700 16px Manrope,'Segoe UI',system-ui,sans-serif}
+.notification-panel-heading p{margin:5px 0 0;color:#9991a3;font-size:11px;line-height:1.5}
+.notification-panel-heading p strong{color:#d6b7f0;font-weight:600}
+.notification-toggle-row{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.master-notification-toggle{padding:14px 0 4px}
+.notification-toggle-row>span{display:grid;gap:4px}.notification-toggle-row strong{font-size:12px}.notification-toggle-row small{color:#9991a3;font-size:10px;line-height:1.5}
+.notification-toggle-row input[type=checkbox],.reminder-option input[type=checkbox]{appearance:none;flex:0 0 auto;width:39px;height:22px;margin:0;border:1px solid rgba(178,153,201,.3);border-radius:20px;background:#211d29;cursor:pointer;transition:background .15s ease,border-color .15s ease}
+.notification-toggle-row input[type=checkbox]::after,.reminder-option input[type=checkbox]::after{content:'';display:block;width:16px;height:16px;margin:2px;border-radius:50%;background:#aaa1b2;transition:transform .15s ease,background .15s ease}
+.notification-toggle-row input[type=checkbox]:checked,.reminder-option input[type=checkbox]:checked{border-color:#a962e3;background:#673b8e}
+.notification-toggle-row input[type=checkbox]:checked::after,.reminder-option input[type=checkbox]:checked::after{transform:translateX(17px);background:#fff}
+.notification-toggle-row input[type=checkbox]:focus-visible,.reminder-option input[type=checkbox]:focus-visible{outline:2px solid #e7b1ff;outline-offset:3px}
+.notification-toggle-row input[type=checkbox]:disabled,.reminder-option input[type=checkbox]:disabled{opacity:.5;cursor:not-allowed}
+.test-notification-button{margin-top:12px}
+.notification-help{margin:11px 0 0;padding:9px 10px;border-radius:10px;background:rgba(255,147,91,.08);color:#eac19f;font-size:10px;line-height:1.5}
+.reminder-option{display:grid;grid-template-columns:30px minmax(0,1fr) 103px 39px;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid rgba(163,147,174,.1)}
+.reminder-option-icon{display:grid;place-items:center;width:28px;height:28px;border-radius:9px;background:rgba(185,120,236,.1);color:#d59dff}
+.reminder-option-copy{display:grid;gap:4px;min-width:0}.reminder-option-copy strong{font-size:11px}.reminder-option-copy small{color:#9991a3;font-size:9px;line-height:1.45}
+.reminder-option input[type=time]{min-height:34px;padding:6px 7px;font-size:10px}
+.unsupported-habit-reminder{display:grid;gap:4px;padding:13px 0;color:#bdb5c6;font-size:10px}.unsupported-habit-reminder span{color:#898191;font-size:9px}
+.notification-limitation{margin:11px 0 0;padding:10px 11px;border:1px solid rgba(255,162,94,.17);border-radius:11px;background:rgba(103,64,43,.1);color:#bba28e;font-size:10px;line-height:1.55}
+@media(max-width:600px){.notification-panel{padding:17px 16px;border-radius:18px;margin-bottom:16px}.notification-panel-heading h2{font-size:15px}.notification-panel-heading p{font-size:11px}.reminder-option{grid-template-columns:28px minmax(0,1fr) 44px;grid-template-rows:auto auto;gap:8px;padding:15px 0}.reminder-option-icon{grid-column:1;grid-row:1;align-self:start}.reminder-option-copy{grid-column:2;grid-row:1;align-self:start}.reminder-time-label{grid-column:2;grid-row:2;width:min(100%,142px)}.reminder-option input[type=time]{width:100%;min-height:44px;font-size:12px;padding:6px 9px}.reminder-option>input[type=checkbox]{grid-column:3;grid-row:1;justify-self:end;margin-top:1px}.notification-toggle-row strong{font-size:12px}.test-notification-button{min-height:44px}}
+@media(max-width:360px){.notification-panel{padding:15px 13px}.reminder-option{grid-template-columns:26px minmax(0,1fr) 42px;gap:7px}.reminder-option-icon{width:26px;height:26px}.reminder-option-copy strong{font-size:11px}.reminder-option-copy small{font-size:10px}.reminder-option input[type=checkbox]{width:42px;height:26px}.reminder-option input[type=checkbox]::after{width:18px;height:18px}.reminder-option input[type=checkbox]:checked::after{transform:translateX(16px)}}
+@media(prefers-reduced-motion:reduce){.notification-toggle-row input[type=checkbox],.reminder-option input[type=checkbox],.notification-toggle-row input[type=checkbox]::after,.reminder-option input[type=checkbox]::after{transition:none}}
+
+/* Notifications stay within Lumi's dark glass theme and retain contrast on OLED screens. */
+.notification-panel{border-color:var(--lumi-line);background:linear-gradient(145deg,#1e232a,#151a20);box-shadow:var(--lumi-shadow)}
+.notification-panel-heading,.notification-panel-heading>div,.notification-panel-heading h2{color:var(--lumi-ink)}.notification-panel-heading p,.notification-panel-heading p strong{color:var(--lumi-muted)}
+.notification-toggle-row strong,.reminder-option-copy strong,.unsupported-habit-reminder{color:var(--lumi-ink)}.notification-toggle-row small,.reminder-option-copy small,.unsupported-habit-reminder span,.notification-limitation{color:var(--lumi-muted)}
+.reminder-option{border-color:var(--lumi-line)}.reminder-option-icon{background:rgba(156,141,255,.13);color:#b3a7ff}.notification-toggle-row input[type=checkbox],.reminder-option input[type=checkbox]{border-color:#59636d;background:#363d45}.notification-toggle-row input[type=checkbox]::after,.reminder-option input[type=checkbox]::after{background:#f5f6f7}.notification-toggle-row input[type=checkbox]:checked,.reminder-option input[type=checkbox]:checked{border-color:var(--lumi-red);background:var(--lumi-red-strong)}
+.notification-help,.notification-limitation{border-color:rgba(255,164,96,.22);background:rgba(115,72,39,.16);color:#d8b894}
+.reminder-time-label{min-width:0;display:block}.reminder-option input[type=time]{min-width:0;max-width:100%;border:1px solid var(--lumi-line-strong);border-radius:10px;background:#10151a;color:var(--lumi-ink);color-scheme:dark;box-shadow:none;font:inherit;font-size:11px}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

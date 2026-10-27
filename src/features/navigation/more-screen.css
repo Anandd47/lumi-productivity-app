@@ -1,0 +1,25 @@
+.more-screen { width: min(100%, 900px); margin: 8px auto 0; padding: 10px 0 20px; }
+.more-screen-heading { margin: 0 2px 20px; }
+.more-screen-heading .section-kicker { color: #7772b6; font-size: 10px; letter-spacing: .13em; }
+.more-screen-heading h1 { margin: 7px 0 5px; color: var(--lumi-ink); font-size: clamp(30px, 4vw, 40px); font-weight: 650; letter-spacing: -.055em; }
+.more-screen-heading p { margin: 0; color: var(--lumi-ink-soft); font-size: 13px; }
+.more-account-card { width: 100%; min-height: 83px; display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; align-items: center; gap: 14px; margin: 0 0 24px; padding: 14px 17px; border: 1px solid var(--lumi-line); border-radius: 20px; background: var(--lumi-paper); color: var(--lumi-ink); text-align: left; box-shadow: var(--lumi-shadow); cursor: pointer; }
+.more-account-avatar { width: 48px; height: 48px; }
+.more-account-copy, .more-account-action { display: grid; min-width: 0; gap: 4px; }
+.more-account-copy strong { font-size: 14px; font-weight: 650; overflow-wrap: anywhere; }
+.more-account-copy small { overflow: hidden; color: var(--lumi-muted); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+.more-account-action { grid-template-columns: 17px auto 16px; align-items: center; gap: 8px; color: #5f5b9e; font-size: 11px; font-weight: 600; white-space: nowrap; }
+.more-group { margin: 22px 0 0; }
+.more-group h2 { margin: 0 2px 10px; color: #77747f; font-size: 10px; font-weight: 690; letter-spacing: .1em; text-transform: uppercase; }
+.more-destinations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.more-destination { display: grid; grid-template-columns: 42px minmax(0, 1fr) 16px; align-items: center; gap: 12px; min-width: 0; min-height: 76px; padding: 12px 14px; border: 1px solid var(--lumi-line); border-radius: 17px; background: var(--lumi-paper); color: var(--lumi-ink); text-align: left; box-shadow: 0 5px 16px rgba(39, 34, 54, .035); cursor: pointer; transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease; }
+.more-destination-icon { display: grid; width: 40px; height: 40px; place-items: center; border-radius: 13px; background: #efedf8; color: #6d68ad; }
+.more-destination:nth-child(2) .more-destination-icon { background: #edf3f7; color: #648aad; }
+.more-destination-copy { display: grid; min-width: 0; gap: 4px; }
+.more-destination-copy strong { color: var(--lumi-ink); font-size: 13px; font-weight: 650; }
+.more-destination-copy small { overflow-wrap: anywhere; color: var(--lumi-muted); font-size: 10px; line-height: 1.4; }
+.more-destination-arrow { color: #97939f; }
+.more-destination:focus-visible, .more-account-card:focus-visible { outline: 2px solid #706ab5; outline-offset: 3px; }
+.more-destination:active, .more-account-card:active { transform: scale(.99); }
+@media (hover:hover) and (pointer:fine) { .more-destination:hover, .more-account-card:hover { border-color: #d1cde7; background: #fff; } }
+@media (max-width: 540px) { .more-screen { margin-top: 4px; } .more-account-card { grid-template-columns: 44px minmax(0, 1fr) auto; gap: 10px; padding: 12px; } .more-account-avatar { width: 42px; height: 42px; } .more-account-action span { display: none; } .more-destinations { grid-template-columns: minmax(0, 1fr); gap: 8px; } .more-destination { min-height: 68px; } }

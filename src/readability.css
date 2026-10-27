@@ -1,0 +1,199 @@
+/* Shared type scale for the dark Lumi surfaces. Keep important copy at phone-readable sizes. */
+:root {
+  --lumi-type-caption: 11px;
+  --lumi-type-label: 12px;
+  --lumi-type-body: 14px;
+  --lumi-type-small-heading: 16px;
+}
+
+.app-shell,
+.auth-shell,
+.admin-users-shell {
+  font-size: var(--lumi-type-body);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+.app-shell p,
+.auth-shell p,
+.admin-users-shell p { line-height: 1.55; }
+.app-shell small,
+.auth-shell small,
+.admin-users-shell small { font-size: max(var(--lumi-type-caption), .875em); line-height: 1.4; }
+
+input::placeholder,
+textarea::placeholder { color: #858e98; opacity: 1; }
+.habit-text-input::placeholder,
+.admin-users-search input::placeholder { color: #929ba5; opacity: 1; }
+
+/* Home and shared shell */
+.account-mode { color: #a7b0b9; font-size: 10px; letter-spacing: .035em; }
+.app-footer { color: #a2abb4; font-size: 12px; }
+.creator-credit { color: #a2abb4; }
+.creator-access-status { font-size: 12px; }
+.race-kicker,.home-date { font-size: 11px; letter-spacing: .09em; }
+.race-heading h1 { line-height: 1.12; }
+.race-subtitle { font-size: 14px; line-height: 1.45; }
+.home-streak { min-width: 0; min-height: 48px; gap: 8px; }
+.home-streak-icon { width: 36px; height: 36px; }
+.home-streak-count { font-size: 13px; font-weight: 720; line-height: 1.2; }
+.stage-topline,.stage-caption { color: #a3adb7; font-size: 10px; letter-spacing: .09em; }
+.briefing-label { color: #aab3bc; font-size: 10px; letter-spacing: .1em; }
+.briefing-time { color: #aab3bc; font-size: 12px; line-height: 1.45; }
+.briefing-action { min-height: 44px; font-size: 12px; }
+.orb-reading { text-shadow: none; }
+.orb-reading strong { font-weight: 650; letter-spacing: -.045em; }
+.orb-reading>span { color: #d0d2dc; font-size: 11px; letter-spacing: .12em; }
+.orb-reading em { color: #c2c8d1; font-size: 12px; letter-spacing: 0; line-height: 1.4; }
+.telemetry-index { color: #9aa4ae; font-size: 10px; }
+.telemetry-cell small { color: #aeb7c0; font-size: 10px; letter-spacing: .07em; }
+.telemetry-cell>div>span { color: #aab3bc; font-size: 11px; }
+.study-activity-day small { color: #aeb7c0; font-size: 10px; }
+.study-activity-total { color: #c1c8d0; font-size: 11px; }
+.home-label,.home-date-note { color: #aab3bc; font-size: 11px; letter-spacing: .08em; }
+
+/* Shared page headings and section labels */
+.section-kicker { color: #ff9b8b; font-size: 11px; letter-spacing: .1em; line-height: 1.35; }
+.focus-page-heading p,.habits-screen-heading p,.health-page-heading p,.streak-page-heading p,
+.account-page-heading p,.insights-heading p,.more-screen-heading p,.admin-users-heading p { font-size: 14px; line-height: 1.55; }
+.focus-page-heading h1,.habits-screen-heading h1,.health-page-heading h1,.streak-page-heading h1,
+.account-page-heading h1,.insights-heading h1,.more-screen h1,.admin-users-heading h1 { line-height: 1.14; }
+
+/* Home task and habit cards */
+.dashboard-data-title h2,.section-heading h2,.habits-card-heading h2 { font-size: 16px; line-height: 1.3; }
+.dashboard-data-actions,.manage-habits-button,.dashboard-add-action,.task-manage-link { font-size: 12px; }
+.dashboard-empty,.habits-empty,.task-empty { font-size: 13px; line-height: 1.5; }
+.habit-name,.priority-title,.task-list .priority-title { font-size: 14px; line-height: 1.4; }
+.habit-meta,.habit-kind,.habit-count,.priority-row time { font-size: 11px; line-height: 1.35; }
+.habit-kind { padding-inline: 7px; }
+.manager-heading p,.manager-empty p,.local-data-note,.core-optional-note,.field-label { font-size: 12px; line-height: 1.5; }
+.kind-option strong { font-size: 12px; }
+.kind-option small { color: #a5adb6; font-size: 11px; line-height: 1.4; }
+.selected-date-copy { color: #a4adb7; font-size: 12px; }
+.task-import-panel h2 { font-size: 15px; }
+.task-import-panel p { color: #c0c6ce; font-size: 12px; line-height: 1.5; }
+
+/* Focus and study */
+.focus-card-heading h2 { font-size: 20px; line-height: 1.3; }
+.timer-state-row,.timer-hint,.focus-message,.study-date-label,.study-date-copy,
+.study-total-copy,.subject-row,.session-row { font-size: 12px; line-height: 1.45; }
+.timer-status { color: #d0c8d9; font-size: 11px; }
+.timer-face span { color: #c0b8c9; font-size: 11px; letter-spacing: .12em; }
+.timer-face strong { font-weight: 650; }
+.timer-mode-tabs button { font-size: 12px; }
+.timer-settings label,.study-target-form label { color: #c0c7ce; font-size: 13px; line-height: 1.4; }
+.study-ring span { color: #c1c6ce; font-size: 12px; }
+.subject-summary>p,.session-history>p,.session-row small { color: #aab2bb; font-size: 11px; line-height: 1.5; }
+
+/* Sleep and health */
+.sleep-tracker-heading p,.sleep-editor-heading p,.sleep-history-copy>span,
+.sleep-history-heading span,.sleep-week-summary article span,.sleep-goal-form label,
+.sleep-settings-row>div span,.sleep-fields label { color: #b4bdc6; font-size: 12px; line-height: 1.45; }
+.sleep-history-copy>strong,.sleep-history-duration { font-size: 14px; line-height: 1.35; }
+.sleep-history-empty,.sleep-feedback { font-size: 13px; line-height: 1.5; }
+.health-stat-note,.health-entry-row>div:nth-child(2)>span,.health-entry-value small,
+.health-history-heading span,.health-empty { color: #b3bcc5; font-size: 12px; line-height: 1.45; }
+.health-stat-card>strong { font-size: 22px; line-height: 1.2; }
+.health-stat-top,.health-goal-row label,.health-goal-row>span,.health-entry-form label { font-size: 13px; }
+
+/* Insights and calendar */
+.analytics-metrics small,.analytics-target-note,.analytics-subject-row span,
+.analytics-subjects p,.calendar-legend,.calendar-legend small { color: #b2bbc4; font-size: 11px; line-height: 1.45; }
+.analytics-metrics strong { font-size: 15px; }
+.calendar-controls strong { font-size: 14px; }
+.month-weekdays,.month-day { font-size: 12px; }
+.day-record-group h3 span,.day-record-row,.day-record-row time,.day-record-row>b,.day-record-row>small,
+.study-record-row strong,.study-record-row small,.study-record-row>b,.record-empty { font-size: 11px; line-height: 1.4; }
+.heatmap-month-labels,.heatmap-weekday-labels { color: #a5aebb; font-size: 10px; }
+.heatmap-legend { color: #b1bac3; font-size: 10px; }
+
+/* Profile, More, Notifications, Streak and Creator Access */
+.profile-identity-kicker,.account-field,.avatar-choice legend,.account-field small,
+.appearance-note span,.data-note,.profile-creator-credit { font-size: 12px; line-height: 1.5; }
+.account-panel-heading p,.appearance-note strong { font-size: 13px; line-height: 1.5; }
+.more-account-copy small,.more-destination-copy small { color: #b4bdc6; font-size: 12px; line-height: 1.45; }
+.more-group h2 { font-size: 13px; }
+.notification-panel-heading p,.notification-toggle-row strong,.notification-toggle-row small,
+.reminder-option-copy strong,.reminder-option-copy small,.notification-help,
+.notification-limitation,.unsupported-habit-reminder,.unsupported-habit-reminder span { font-size: 12px; line-height: 1.5; }
+.streak-stat-card>span,.streak-stat-card>strong small,.streak-panel-heading p,.grace-no-date,
+.streak-core-list>p,.streak-milestone>small,.streak-milestone>em,.grace-form label,
+.grace-form>span,.grace-used-row>span,.streak-core-heading,.streak-core-item,
+.streak-manage-link,.streak-config-warning,.streak-feedback { font-size: 12px; line-height: 1.45; }
+.streak-stat-card>strong { font-size: clamp(17px, 3vw, 21px); }
+.streak-milestone>strong { font-size: 14px; }
+.admin-users-table,.admin-users-table th,.admin-users-table td { font-size: 12px; line-height: 1.45; }
+.admin-users-table th,.admin-overview-card>span,.admin-overview-card>small,
+.admin-registration-month small,.admin-registration-month b,.admin-users-panel-heading p,
+.admin-users-pagination span,.admin-users-footer,.admin-email-status { font-size: 11px; line-height: 1.4; }
+.auth-kicker,.auth-footer,.auth-links button,.auth-form label { font-size: 12px; line-height: 1.45; }
+.auth-description,.auth-error,.auth-message { font-size: 14px; line-height: 1.5; }
+
+/* Shared header: brand owns the left edge; status and controls form a right-aligned group. */
+.topbar { width: 100%; min-width: 0; justify-content: space-between; gap: clamp(8px, 2vw, 18px); }
+.topbar-right { min-width: 0; display: flex; align-items: center; justify-content: flex-end; gap: clamp(8px, 1.5vw, 14px); margin-left: auto; }
+.topbar-actions { min-width: 0; gap: 8px; }
+.topbar-actions .icon-button,.topbar-actions .avatar { width: 42px; height: 42px; flex: 0 0 auto; }
+.topbar-right .account-mode { flex: 0 1 auto; max-width: clamp(72px, 12vw, 145px); }
+
+/* The date-picker label is the single outer control; reset global input chrome inside it. */
+.date-picker-label { min-width: 0; }
+.date-picker-label input { flex: 0 1 148px; width: 148px; min-width: 0; min-height: 0; padding: 0; border: 0; border-radius: 0; outline: 0; box-shadow: none; background: transparent; }
+.date-picker-label input:focus-visible { outline: 0; box-shadow: none; }
+.date-picker-label:focus-within { outline: 2px solid #ff897a; outline-offset: 3px; }
+
+/* Date-scoped task views and the habit check-in strip use existing saved records. */
+.task-list-toolbar { min-width: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 9px 14px; padding: 11px 0; border-bottom: 1px solid var(--lumi-line); }
+.task-list-toolbar p { margin: 0; color: var(--lumi-ink-soft); font-size: 13px; font-weight: 550; }
+.task-view-filters { display: flex; flex-wrap: wrap; gap: 5px; }
+.task-view-filters button { min-height: 38px; padding: 0 12px; border: 1px solid transparent; border-radius: 10px; background: transparent; color: var(--lumi-ink-soft); font-size: 12px; cursor: pointer; }
+.task-view-filters button[aria-pressed="true"] { border-color: rgba(255,96,79,.24); background: var(--lumi-red-soft); color: var(--lumi-ink); }
+.task-filter-empty { min-height: 56px; }
+.habit-progress-summary { width: fit-content; max-width: 100%; margin: 0 2px 2px; padding: 7px 11px; border: 1px solid var(--lumi-line); border-radius: 10px; color: var(--lumi-ink); font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.habit-week-history { min-width: 0; margin: 0 0 3px; }
+.habit-week-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 5px 12px; margin: 0 2px 8px; }
+.habit-week-heading h2 { margin: 0; color: var(--lumi-ink); font-size: 14px; font-weight: 620; }
+.habit-week-heading>span { color: var(--lumi-muted); font-size: 11px; }
+.habit-week-strip { display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 7px; }
+.habit-week-day { min-width: 0; min-height: 56px; display: grid; align-content: center; justify-items: center; gap: 3px; border: 1px solid var(--lumi-line); border-radius: 12px; background: rgba(255,255,255,.025); }
+.habit-week-day>span { color: var(--lumi-muted); font-size: 10px; }
+.habit-week-day>strong { color: var(--lumi-ink); font-size: 14px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.habit-week-day.has-checkin { border-color: rgba(156,141,255,.25); background: rgba(156,141,255,.08); }
+.habit-week-day.has-checkin>strong { color: #c8b9ff; }
+.habit-week-day.future { border-style: dashed; background: transparent; }
+.habit-week-day.future>strong { color: var(--lumi-muted); }
+.habit-week-empty { margin: 0; color: var(--lumi-ink-soft); font-size: 12px; line-height: 1.5; }
+
+@media (max-width: 600px) {
+  .topbar { min-height: 60px; }
+  .topbar-right { gap: 7px; }
+  .topbar-right .account-mode { max-width: 96px; }
+  .topbar-actions { gap: 5px; }
+  .topbar-actions .icon-button,.topbar-actions .avatar { width: 40px; height: 40px; }
+  .date-picker-label input { flex-basis: 132px; width: 132px; }
+  .task-list-toolbar { align-items: flex-start; flex-direction: column; }
+  .task-view-filters { width: 100%; }
+  .task-view-filters button { flex: 1 1 0; min-height: 40px; }
+  .habit-week-strip { gap: 5px; }
+  .habit-week-day { min-height: 52px; border-radius: 10px; }
+  .home-streak { min-height: 46px; padding-inline: 8px; }
+  .home-streak-icon { width: 34px; height: 34px; }
+  .home-streak-count { font-size: 12px; }
+  .streak-stat-card>strong { font-size: clamp(17px, 3vw, 21px); }
+  .race-kicker,.stage-topline,.stage-caption { letter-spacing: .06em; }
+  .telemetry-cell { row-gap: 4px; }
+  .calendar-legend small { font-size: 10px; }
+}
+
+@media (max-width: 380px) {
+  .topbar-right .account-mode { display: none; }
+  .topbar-actions { gap: 4px; }
+  .topbar-actions .icon-button,.topbar-actions .avatar { width: 40px; height: 40px; }
+  .habit-week-strip { gap: 4px; }
+  .habit-week-day { min-height: 48px; }
+  .account-mode { max-width: 64px; font-size: 8.5px; letter-spacing: .015em; }
+  .home-streak { gap: 6px; }
+  .home-streak-icon { width: 32px; height: 32px; }
+  .home-streak-count { font-size: 11.5px; }
+  .race-kicker { font-size: 10px; }
+}

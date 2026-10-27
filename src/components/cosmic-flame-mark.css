@@ -1,0 +1,25 @@
+.cosmic-flame-mark {
+  display: block;
+  flex: 0 0 auto;
+  overflow: visible;
+  filter: drop-shadow(0 0 4px rgba(255, 112, 55, .35));
+}
+
+.cosmic-flame-aura { fill: none; stroke: rgba(179, 116, 255, .72); stroke-width: 1; opacity: .55; }
+.cosmic-flame-layer { opacity: .45; }
+.cosmic-flame-glint { filter: drop-shadow(0 0 3px rgba(255, 239, 196, .82)); }
+.cosmic-flame-mark[data-milestone="active"] { filter: drop-shadow(0 0 5px rgba(255, 121, 57, .48)); }
+.cosmic-flame-mark[data-milestone="week"] { filter: drop-shadow(0 0 6px rgba(179, 116, 255, .52)); }
+.cosmic-flame-mark[data-milestone="month"] { filter: drop-shadow(0 0 8px rgba(255, 131, 63, .62)) drop-shadow(0 0 6px rgba(153, 92, 255, .44)); }
+.cosmic-flame-mark[data-milestone="century"] { filter: drop-shadow(0 0 10px rgba(255, 143, 67, .65)) drop-shadow(0 0 11px rgba(144, 111, 255, .6)); }
+.cosmic-flame-mark--celebrate { animation: cosmic-flame-milestone 560ms cubic-bezier(.2,.75,.25,1) both; }
+
+@keyframes cosmic-flame-milestone {
+  0% { transform: scale(.82); filter: brightness(.9) drop-shadow(0 0 2px rgba(255, 112, 55, .2)); }
+  58% { transform: scale(1.14); filter: brightness(1.25) drop-shadow(0 0 12px rgba(197, 115, 255, .7)); }
+  100% { transform: scale(1); }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .cosmic-flame-mark--celebrate { animation:none; }
+}
